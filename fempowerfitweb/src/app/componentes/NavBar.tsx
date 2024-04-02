@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-interface NavBarProps {
-    active: string;
-}
+import Image from 'next/image';
 
-const NavBar: React.FC<NavBarProps> = ({ active }) => {
+
+
+const NavBar = () => {
     const [isFixed, setIsFixed] = useState(false);
     const [showTopLink, setShowTopLink] = useState(false);
 
@@ -33,14 +33,17 @@ const NavBar: React.FC<NavBarProps> = ({ active }) => {
     }, []);
 
     return (
-      <nav id="nav" className={`navbar ${isFixed ? 'fixed top-0 left-0 w-full z-50' : ''}`}>
-            <ul className="flex space-x-4">
-                <li><Link href="#home">Home</Link></li>
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#services">Services</Link></li>
-            </ul>
-            {showTopLink && <div className="top-link">Topo</div>}
+        <nav id="nav" className="fixed w-full  z-10 pt-16">
+            <div className='mx-20 flex justify-between items-center'>
+                <ul className="flex space-x-4">
+                    <li><Link href="#home">Home</Link></li>
+                    <li><Link href="#about">About</Link></li>
+                    <li><Link href="#services">Services</Link></li>
+                </ul>
+                <Image src='/logo.png' alt="logo" width={200} height={100} className=''/>
+            </div>
         </nav>
+      
     );
 };
 

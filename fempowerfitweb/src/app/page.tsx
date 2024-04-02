@@ -1,12 +1,30 @@
 import NavBar from "@/app/componentes/NavBar";
+import Services from "./pages/Services/page";
+import About from "./pages/About/page";
+import Home from "./pages/Home/page";
 
-export default function Home() {
-  return ( 
-    <main className="flex min-h-screen flex-col items-center">
-      <NavBar active="home" />
+export default function Page() {
+  return (
+    <>
+   
+      <NavBar  />  
 
-      <h1>home</h1>
+      <main>
+      <Home />
+      <About/>
+      <Services />
+     
+     
+      </main>
 
-    </main>
+      <footer>
+
+      </footer>
+   
+
+    
+
+     
+    </>
   );
 }

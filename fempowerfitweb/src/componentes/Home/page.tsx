@@ -21,7 +21,7 @@ export default function Home(){
                   </p>
                   <p> para uma vida mais saudável,</p>
                   <p>equilibrada e fortalecida</p>
-                  <button href="/" className="mt-10 border border-red-300 px-10 rounded-lg h-10 btn color:#754242">Saiba mais</button> <h1></h1>
+                  <button  className="mt-10 border border-red-300 px-10 rounded-lg h-10 btn color:#754242">Saiba mais</button> <h1></h1>
 
             </div>
             </div>

@@ -20,7 +20,7 @@ export default function About()  {
   }
   
   useEffect(() => {
-    listaSuplementos()
+    // listaSuplementos()
   }, [])
 
   return ( 

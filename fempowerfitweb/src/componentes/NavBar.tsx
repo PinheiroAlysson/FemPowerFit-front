@@ -4,7 +4,6 @@ import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
 interface NavBarProps {
     setIsLoginOpen: Dispatch<SetStateAction<boolean>>;
 }
@@ -39,7 +38,7 @@ const NavBar = ({ setIsLoginOpen }: NavBarProps) => {
         <nav id="nav" className="fixed w-full  z-10 pt-16">
             <div className='mx-20 flex justify-between items-center'>
                 <ul className="flex space-x-4">
-                    <li><Link href="#home" className='hover:underline underline-offset-8 decoration-red-300 '>Home</Link></li>
+                    <li><Link href="#home" className='hover:underline underline-offset-8 decoration-red-300 text-green-500'>Home</Link></li>
                     <li><Link href="#about" className='hover:underline underline-offset-8 decoration-red-300'>About</Link></li>
                     <li><Link href="#services" className='hover:underline underline-offset-8  decoration-red-300'>Services</Link></li>
                 </ul>

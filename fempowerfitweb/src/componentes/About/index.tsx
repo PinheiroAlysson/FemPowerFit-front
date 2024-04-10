@@ -24,20 +24,21 @@ export default function About()  {
   }, [])
 
   return ( 
-    <main id="about" className="flex min-h-screen flex-col items-center">
-      <h1 className="text-4xl font-serif mt-40 ">ABOUT</h1>
+    <div id="about" className="flex min-h-screen flex-col items-center">
+      <h1 className="text-4xl font-serif mt-40">ABOUT</h1>
+
       <div className=" p-10  grid-cols-5 grid w-full " >
 
-        {suplementos.map((suplemento) => {
-          return (
-            <div>
-              <h2>{suplemento.title}</h2>
-              <p>{suplemento.body}</p>
-              <p>Usuario - {suplemento.userId}</p>
-            </div>
-          )
-        })}
+        {/* {suplementos.map((suplemento) => {
+            return (
+              <div>
+                <h2>{suplemento.title}</h2>
+                <p>{suplemento.body}</p>
+                <p>Usuario - {suplemento.userId}</p>
+              </div>
+            )
+          })} */}
       </div>
-    </main>
+    </div>
   );
 };

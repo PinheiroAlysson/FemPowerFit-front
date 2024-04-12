@@ -10,13 +10,15 @@ import About from "../componentes/About";
 import Home from "../componentes/Home";
 import NavBar from "@/componentes/NavBar";
 import { LoginModal } from "@/componentes/LoginModal";
+import { CreateAcountModal } from "@/componentes/CreateAcountModal";
 
 export default function Page() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isCreateAcountOpen, setIsCreateAcountOpen] = useState(false);
   return (
     <>
       <header>
-        <NavBar setIsLoginOpen={setIsLoginOpen} />
+        <NavBar setIsLoginOpen={setIsLoginOpen} setIsCreateAcountOpen={setIsCreateAcountOpen} />
       </header>
       {/* <div id="home" className='min-h-screen flex-col items-center'>
         <div className="banner">
@@ -60,6 +62,7 @@ export default function Page() {
       <Services />
 
       <LoginModal setIsLoginOpen={setIsLoginOpen} isOpen={isLoginOpen} />
+      <CreateAcountModal setIsCreateAcountOpen={setIsCreateAcountOpen} isOpen={isCreateAcountOpen} />
     </>
   );
 }

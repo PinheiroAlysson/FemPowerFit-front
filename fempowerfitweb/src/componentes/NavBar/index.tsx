@@ -12,9 +12,10 @@ import Image from 'next/image';
 
 interface NavBarProps {
   setIsLoginOpen: Dispatch<SetStateAction<boolean>>;
+  setIsCreateAcountOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const NavBar = ({ setIsLoginOpen }: NavBarProps) => {
+const NavBar = ({ setIsLoginOpen, setIsCreateAcountOpen}: NavBarProps) => {
   const [isFixed, setIsFixed] = useState(false);
   const [showTopLink, setShowTopLink] = useState(false);
 
@@ -82,6 +83,7 @@ const NavBar = ({ setIsLoginOpen }: NavBarProps) => {
             Login
           </button>
           <button
+            onClick={() => setIsCreateAcountOpen(true)}
             className='border border-red-300 px-10
             rounded-lg h-10 transition-all hover:scale-105
             duration-150 ease-linear'
